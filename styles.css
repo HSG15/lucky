@@ -1,0 +1,288 @@
+body{
+    text-align: center;
+    background-color: #0B192F;
+}
+::selection{
+    background-color: #CCD6F6;
+    color: #0B192F;
+}
+/* navbar */
+.container-fluid{
+    padding: 0% 7%;
+    box-shadow: -3px -3px 7px #ffffff73,
+    2px 2px 5px rgba(94, 104, 121, 0.288);;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    color: #64FFDA;
+    font-family: 'Candal', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.nav-item{
+    padding: 0 18px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Fira Code', monospace;
+}
+
+.nav-item a:hover {
+    color: #64FFDA;
+}
+
+/* name */
+
+#hello-world{
+    color: #64FFDA;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Candal', sans-serif;
+    font-family: 'Fira Code', monospace;
+}
+
+#name{
+    color: #CCD6F6;
+    font-size: 5rem;
+}
+
+#subtitle{
+    color: #8892AF;
+    font-size: 4rem;
+}
+
+.heading p{
+    color: #8892AF;
+    line-height: 1.5rem;
+}
+
+.heading a{
+    color: #64FFDA;
+    text-decoration: none;
+}
+
+.row{
+    padding: 3% 15%;
+}
+
+.row h1{
+    font-family: 'Candal', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 2.5rem;
+    color: blueviolet;
+    line-height: 1.5;
+}
+
+.row h2{
+    font-family: 'Candal', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.heading{
+    text-align: left;
+    line-height: 2;
+    padding: 7% 15%;
+}
+
+.btn{
+    padding: 10px 20px;
+    outline-color: #64FFDA;
+    font-family: 'Fira Code', monospace;
+}
+
+/* About Me */
+#aboutMe{
+    padding-top: 100px;
+}
+#aboutMe h3{
+    color: #CCD6F6;
+}
+#aboutMe p{
+    color: #8892AF;
+    text-align: justify;
+}
+
+.my-img{
+    background-image: url(./images/mebw.JPG);
+    width: 300px;
+    height: 380px;
+    border: 0 solid #64FFDA;
+    margin: auto;
+    background-size: cover;
+    margin-top: 30px;
+    border-radius: 5%;
+}
+.my-img:hover{
+    background-image: url(./images/me.JPG);
+}
+
+/* media query */
+@media(max-width: 767px){
+    #title{
+        text-align: center;
+    }
+    body{
+        transform: scale(1.2);
+        transform-origin: top;
+    }
+    .my-img{
+        
+        text-align: center;
+        position: static;
+    }
+}
+
+/* Skills */
+#skills h3{
+    color: #CCD6F6;
+}
+
+.my-skills{
+    padding: 0px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    margin-top: 0px;
+}
+
+#skill-elements p{
+    color: #64FFDA;
+    font-family: 'Fira Code', monospace;
+}
+
+#foot{
+    font-family: 'Fira Code', monospace;
+    color: #CCD6F6;
+    font-size: 0.8rem;
+}
+#foot a{
+    color: #64FFDA;
+    text-decoration: none;
+}
+
+/* Education */
+#education{
+    padding-top: 200px;
+    color: #CCD6F6;
+    margin-bottom: 10%;
+}
+
+/* Testimonials */
+
+#testimonials{
+    color: #8892AF;
+    
+    line-height: 3;
+}
+
+.testimonial-text{
+    font-family: 'candal';
+}
+
+.carousel-item{
+    padding: 3% 15%;
+
+}
+
+.testimonial_image{
+    width: 10%;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.carousel-control-prev-icon{
+    margin-left: 180px;
+}
+
+.carousel-control-next-icon{
+    margin-right: 180px;
+}
+
+/* Projects */
+#projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+.each-project{
+    border: 4px solid #ff9501;
+    width: 345px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 20px ;
+    overflow: hidden;
+}
+
+.each-project .project {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project{
+    transition: transform 0.5s ease-in-out;
+}
+
+.project:hover{
+    transform: scale(1.1);
+}
+
+
+/* Certification */
+#certification{
+    color: #CCD6F6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.certificate{
+    height: 200px;
+    border-radius: 20px;
+    margin: 20px ;
+    transition: transform 0.5s ease-in-out;
+}
+
+.certificate:hover{
+    transform: scale(1.1);
+
+}
+
+/* Contact */
+#contact{
+    margin-top: 20%;
+}
+#next{
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    color: #64FFDA;
+}
+
+.my-msg {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    color: #8892AF;
+    line-height: 1.5em; /* Adjust line spacing if needed */
+}
+
+/* font awesome icons */
+
+.fa-2xl{
+    padding: 2px;
+    margin-bottom: 35px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-brands:hover{
+    transform: scale(1.3);
+}
+
+.fa-solid:hover{
+    transform: scale(1.3);
+}
