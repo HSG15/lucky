@@ -1,5 +1,4 @@
 # Personal Portfolio using HTML, CSS &amp; Bootstrap 
-  https://hsg15.github.io/lucky/
 <a href="https://hsg15.github.io/lucky/" target="_blank" rel="noopener">Do visit 😊</a>
 <h3> Here are some snaps ✨ </h3>
 <hr>
