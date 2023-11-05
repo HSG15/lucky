@@ -1,7 +1,9 @@
 body{
     text-align: center;
     background-color: #0B192F;
+    box-sizing: border-box;
 }
+
 ::selection{
     background-color: #CCD6F6;
     color: #0B192F;
@@ -200,58 +202,92 @@ body{
 }
 
 /* Projects */
-#projects{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 15%;
+
+.container {
+    padding: 10px 10%;
 }
-
-.each-project{
-    border: 4px solid #ff9501;
-    width: 345px;
-    height: 200px;
-    border-radius: 20px;
-    margin: 20px ;
-    overflow: hidden;
-}
-
-.each-project .project {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.project{
-    transition: transform 0.5s ease-in-out;
-}
-
-.project:hover{
-    transform: scale(1.1);
-}
-
-
-/* Certification */
-#certification{
+.sub-title {
     color: #CCD6F6;
 }
-
-a {
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: #0B192F;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 16px;
+    transition: height 0.5s;
+}
+.layer h2 {
+    margin-bottom: 30px;
+    color: #CCD6F6;
+}
+.layer p {
+    color: #8892AF;
+}
+.layer a {
+    margin-top: 30px;
+    color: #080808;
     text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
 }
-
-
-.certificate{
-    height: 200px;
-    border-radius: 20px;
-    margin: 20px ;
-    transition: transform 0.5s ease-in-out;
-}
-
-.certificate:hover{
+.work:hover img {
     transform: scale(1.1);
+}
+.work:hover .layer {
+    height: 100%;
+}
+.btn_project {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #0B192F;
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.75s;
+}
+.btn_project:hover {
+    background: #0B192F;
+}
 
+/* Certification */
+
+#certificate{
+    margin-top: 15%;
 }
 
 /* Contact */
