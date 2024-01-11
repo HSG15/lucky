@@ -55,6 +55,10 @@ body{
 .heading p{
     color: #8892AF;
     line-height: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-overflow: ellipsis;
+
 }
 
 .heading a{
@@ -102,9 +106,9 @@ body{
     color: #CCD6F6;
 }
 #aboutMe p{
-    color: #8892AF;
     text-align: justify;
 }
+
 
 .my-img{
     background-image: url(./images/mebw.JPG);
@@ -120,37 +124,44 @@ body{
     background-image: url(./images/me.JPG);
 }
 
-/* media query */
-@media(max-width: 767px){
-    #title{
-        text-align: center;
-    }
-    body{
-        transform: scale(1.2);
-        transform-origin: top;
-    }
-    .my-img{
-        
-        text-align: center;
-        position: static;
-    }
-}
 
 /* Skills */
+    .my-skills {
+      list-style-type: none; /* Remove default list styling */
+      margin: 0; /* Remove default margin for the list */
+      padding: 0; /* Remove default padding for the list */
+    }
+
+    .my-skills li {
+      display: inline-block; /* Display list items inline */
+      width: 45%; /* Set the width to 45% to leave space for arrows and margin */
+      margin-bottom: 0; /* Remove any bottom margin */
+      margin-left: 0; /* Remove any left margin */
+      position: relative; /* Set position to relative for pseudo-element */
+      text-align: left; /* Align text to the left */
+    }
+
+    .my-skills li::before {
+      content: "▻"; /* Unicode character for arrow */
+      color: #64FFDA; /* Change color to #64FFDA */
+      font-weight: bold; /* Optionally make the arrow bold */
+      margin-right: 5px; /* Optional spacing between arrow and text */
+    }
+
 #skills h3{
     color: #CCD6F6;
 }
-
-.my-skills{
-    padding: 0px;
+.my-skills {
+    padding: 0;
     font-family: 'Fira Code', monospace;
-    font-size: 0.8rem;
-    margin-top: 0px;
-}
-
-#skill-elements p{
+    font-size: 0.85rem;
+    margin-top: 0;
     color: #64FFDA;
-    font-family: 'Fira Code', monospace;
+    line-height: 1.7rem;
+}
+.my-skills p {
+    margin: 0; /* Remove default margin */
+    line-height: 2; /* Adjust line height if needed */
 }
 
 #foot{
@@ -244,10 +255,6 @@ body{
     font-size: 16px;
     transition: height 0.5s;
 }
-.layer h2 {
-    margin-bottom: 30px;
-    color: #CCD6F6;
-}
 .layer p {
     color: #8892AF;
 }
@@ -304,7 +311,7 @@ body{
     margin-top: 30px;
     margin-bottom: 60px;
     color: #8892AF;
-    line-height: 1.5em; /* Adjust line spacing if needed */
+    line-height: 1.5; /* Adjust line spacing if needed */
 }
 
 /* font awesome icons */
@@ -313,6 +320,7 @@ body{
     padding: 2px;
     margin-bottom: 35px;
     transition: transform 0.3s ease-in-out;
+    font-size: 2.4em;
 }
 
 .fa-brands:hover{
@@ -321,4 +329,194 @@ body{
 
 .fa-solid:hover{
     transform: scale(1.3);
+}
+
+@media only screen and (min-width: 800px) {
+    .hfls{
+        display: none;
+    }
+}
+
+/* media query */
+/* Mobile Responsiveness */
+@media only screen and (max-width: 767px) {
+    body {
+        transform: scale(1);
+        transform-origin: top;
+    }
+    
+    .hfsc{
+        display: none;
+    }
+
+    .my-img {
+        width: 80%; /* Adjust the width as needed for smaller screens */
+        height: auto;
+        margin: 30px auto; /* Center the image */
+        border: 0 solid #64FFDA;
+        border-radius: 5%;
+        display: block; /* Ensure the image is treated as a block element */
+        background-position: center; /* Center the background image */
+        background-size: contain; /* Ensure the background image is fully visible */
+        background-repeat: no-repeat; /* Prevent the background image from repeating */
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    .row {
+        padding: 3% 5%;
+    }
+
+    #education {
+        padding-top: 50px;
+    }
+
+    .carousel-item {
+        padding: 3% 5%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .testimonial_image {
+        width: 25%;
+        height: auto;
+        border-radius: 50%;
+        margin: 20px;
+    }
+
+    .my-skills .col-lg-6,
+    .my-skills .col-md-6,
+    .my-skills .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .my-img{
+        background-image: url(./images/mebw.JPG);
+        width: 250px;
+        height: 300px;
+        border: 0 solid #64FFDA;
+        margin: auto;
+        background-size: cover;
+        margin-top: 30px;
+        border-radius: 5%;
+    }
+    .my-img:hover{
+        background-image: url(./images/me.JPG);
+    }
+
+    /* PROJECTS */
+    
+    .work {
+        width: 80%; /* Set the width to 100% for smaller screens */
+        margin: 0 auto; /* Center the container */
+        position: relative;
+    }
+
+    .work-list {
+        grid-template-columns: 1fr; /* Display one column for smaller screens */
+        grid-gap: 20px; /* Adjust the gap between projects */
+    }
+
+    .layer {
+        padding: 0 10px; /* Adjust the padding for smaller screens */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .work img {
+        width: 80%; /* Adjust the width as needed for smaller screens */
+        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        border-radius: 10px;
+        display: block;
+        margin-left: 25px;
+        transition: transform 0.5s;
+    }
+
+    /* CERTIFICATES */
+    
+    #certificate {
+        margin-top: 5%;
+    }
+
+    #contact {
+        margin-top: 10%;
+    }
+
+    /* Font size adjustments */
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    #hello-world {
+        font-size: 0.7rem;
+    }
+
+    #name {
+        font-size: 2.5rem;
+    }
+
+    #subtitle {
+        font-size: 1.8rem;
+    }
+
+    .heading p {
+        font-size: .95rem;
+        text-align: justify;
+        line-height: 1.35rem;
+        width: 100%;
+    }
+
+    .row h1 {
+        font-size: 1.8rem;
+    }
+
+    .row h2 {
+        font-size: 1rem;
+    }
+
+    .layer p {
+        margin: 2px 8px 0px;
+        color: #8892AF;
+        font-size: 14px;
+    }
+    .layer a {
+        margin-top: 20px;
+        color: #080808;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 50px;
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    #foot {
+        font-size: 0.7rem;
+    }
+
+    #next {
+        font-size: 0.9rem;
+    }
+
+    .my-msg {
+        font-size: 1rem;
+        text-align: center;
+        margin: 0px 25px 15px;
+        justify-content: center;
+    }
+    
 }
